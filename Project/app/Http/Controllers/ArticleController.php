@@ -9,7 +9,10 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        return Article::all();
+        $articles = Article::all();
+        $articles_cate1 = Article::where('category','Test1')->get();
+        return view('pages.posts', ['articles' => $articles, 'articles_cate1' => $articles_cate1]);
+        // return Article::all();
     }
 
     public function show(Article $article)
