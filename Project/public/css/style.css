@@ -1,0 +1,333 @@
+@charset "UTF-8";
+
+html, body {
+  background-color: #fff;
+  color: #636b6f;
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+  height: 100vh;
+  margin: 0;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.position-ref {
+  position: relative;
+}
+
+.top-right {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  font-size: 84px;
+}
+
+.links > a {
+  color: #636b6f;
+  padding: 0 25px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.m-b-md {
+  margin-bottom: 30px;
+}
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+.nav-menu li.menu-item {
+  float: left;
+  padding: 0 15px;
+  border-bottom: 0 solid transparent;
+  position: inherit;
+}
+.nav-menu li.menu-item a {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: none;
+  line-height: 40px;
+  max-height: 40px;
+  display: block;
+  color: #7e7e7e;
+}
+
+.unique-color-dark {
+  background-color: #1c2331 !important;
+}
+
+@media screen and (min-width: 576px) {
+  .slice.style1 .card {
+    flex-basis: 350px;
+    margin-bottom: 30px;
+    border: none;
+  }
+}
+@media (min-width: 576px) {
+  .card-deck .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-right: 15px;
+    margin-bottom: 0;
+    margin-left: 15px;
+  }
+}
+.card-deck .card {
+  margin-bottom: 15px;
+}
+
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.card-body {
+  padding: 15px 0;
+}
+
+/* Menu style */
+li.menu-item:last-child {
+    padding-right: 0;
+}
+.sh-nav-social a {
+    display: block!important;
+    float: left;
+    padding: 0 5px;
+}
+.sh-nav-social a:first-child {
+    padding-left: 0;
+}
+.nav-menu li.menu-item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-height: none;
+    transition: .3s padding ease-in-out;
+}
+a {
+    color: #47c9e5;
+    text-decoration: none;
+    word-wrap: break-word;
+}
+.menu-item a:hover {
+    color: #47c9e5!important;
+    text-decoration: none;
+}
+.site-logo {
+    padding: 15px 0;
+    padding-right: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 0px;
+    position: relative;
+    z-index: 100;
+}
+.menu-block {
+    position: relative;
+    left: 0;
+    top: 0px;
+    border-bottom: 1px solid rgba(0,0,0,.08);
+}
+.cart-icon {
+    position: relative;
+    top: -4px;
+    margin-left: -5px;
+    display: inline-block;
+}
+.cart-icon span {
+    display: inline-block;
+    background-color: #47c9e5;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    position: relative;
+    z-index: 100;
+    width: 20px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    border-radius: 9px;
+    font-weight: 700;
+    box-shadow: 0px 1px 2px 1px rgba(0,0,0,.15);
+}
+/* Home style */
+.about-us .row {
+    margin: 0;
+}
+.home {
+    padding: 130px 0px 130px 0px;
+}
+.home-box {
+    text-align: center;
+}
+.left-image{
+    background-size: cover;
+    padding: 50px 15px 0px 15px;
+    background-color: #ffffff;
+    background-image: url(/image/Agency_about_us_1.jpg);
+    background-position: bottom;
+}
+.right-text {
+    padding: 130px 7% 130px 7%;
+    background-color: #ffffff;
+    background-position: center center;
+    box-shadow: 0 15px 25px -7px rgba(0,0,0,0.09), 0 -12px 10px -10px rgba(0,0,0,0.04);
+}
+.sh-counter-number {
+    color: #42c4e0;
+}
+.sh-counter-style3 .text-left {
+    width: 50%;
+    padding-left: 18px;
+    border-left: 1px solid rgba(0,0,0,.1);
+}
+.sh-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    float: none!important;
+}
+.text-left {
+    text-align: left;
+}
+.sh-counter-title {
+    color: #545454;
+}
+.sh-counter-style3 .sh-counter-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+.sh-counter-subtitle {
+    color: #3f3f3f;
+}
+.sh-counter-style3 .sh-counter-subtitle {
+    font-size: 18px;
+}
+.our-infor {
+    padding: 100px 15px 100px 15px;
+}
+.sh-counter-number {
+    font-weight: 700!important;
+}
+.sh-counter-style3 .sh-counter-number {
+    font-size: 48px;
+    font-weight: 700;
+    padding: 0;
+}
+.sh-counter-style3 .text-right {
+    width: 50%;
+    padding-right: 18px;
+}
+.text-right {
+    text-align: right;
+}
+/* Style */
+.size-m {
+    font-size: 20px;
+}
+.size-s {
+    font-size: 16px;
+}
+.size-l {
+    font-size: 30px;
+}
+.size-xl {
+    font-size: 36px;
+}
+.heading .heading-content {
+    background-position: 50% 50%;
+    background-size: cover;
+    margin-bottom: 0;
+}
+.heading span {
+    display: block;
+}
+.sh-section {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #fff;
+}
+.divider-content {
+    position: relative;
+    font-size: 16px;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+.divider-icon {
+    font-size: 24px;
+    padding: 0 25px;
+    letter-spacing: 1px;
+}
+.divider-icon i {
+    position: relative;
+    bottom: -1px;
+}
+.divider-content:before, .divider-content:after {
+    position: absolute;
+    top: 50%;
+    overflow: hidden;
+    width: 50%;
+    height: 1px;
+    content: '';
+    border-top: 0 solid #e5e5e5;
+    margin-top: 0;
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+.divider-content:before {
+    margin-left: -50%;
+    text-align: right;
+}
+
+.sh-divider-content-none .sh-divider-line {
+    border-top-width: 1px;
+    border-top-color: #ebebeb;
+    border-top-style: solid;
+}
+.divine-line {
+    padding: 0px 0px 130px 0px;
+}

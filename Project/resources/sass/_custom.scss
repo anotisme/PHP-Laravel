@@ -50,6 +50,45 @@ html, body {
     margin-bottom: 30px;
 }
 
+// Menu
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    li.menu-item {
+        float: left;
+        padding: 0 15px;
+        border-bottom: 0 solid transparent;
+        position: inherit;
+        a {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: none;
+            line-height: 40px;
+            max-height: 40px;
+            display: block;
+            color: #7e7e7e;
+            ::after {
+                font-family: 'simple-line-icons'!important;
+                speak: none;
+                font-style: normal;
+                font-weight: 400;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                position: relative;
+                font-size: 12px;
+                margin-left: 8px;
+                content: "\e604";
+                position: relative;
+            }
+        }
+    }
+}
+
 // Footer
 .unique-color-dark {
     background-color: #1c2331 !important;
