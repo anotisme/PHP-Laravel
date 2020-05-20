@@ -11,7 +11,7 @@ class ArticleController extends Controller
     {
         $articles = Article::all();
         $articles_cate1 = Article::where('category','Test1')->get();
-        return view('pages.posts', ['articles' => $articles, 'articles_cate1' => $articles_cate1]);
+        return view('pages.article', ['articles' => $articles, 'articles_cate1' => $articles_cate1]);
         // return Article::all();
     }
 

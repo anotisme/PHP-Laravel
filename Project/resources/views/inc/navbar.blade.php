@@ -10,7 +10,7 @@
                 <nav>
                     <ul id="menu-header-nav" class="nav-menu">
                         <li class="menu-item">
-                            <a href="/home">Home</a>
+                            <a href="/">Home</a>
                         </li>
                         <li class="menu-item">
                             <a href="/shop">Shop</a>

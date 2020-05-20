@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="post-style">
-
+        {{ dd($articles) }}
         <div class="style1">
             <a href="#">Category</a>
             <div class="card-deck more-posts-deck">

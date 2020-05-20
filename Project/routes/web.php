@@ -1,5 +1,5 @@
 <?php
-
+use App\Article;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    // return view('home');
+    $articles = Article::all();
+    return View::make('home', array('articles' => $articles));
 });
 Route::get('/contact', function () {
     return view('pages.contact');
@@ -20,15 +22,12 @@ Route::get('/contact', function () {
 Route::get('/about', function () {
     return view('pages.about');
 });
+Route::get('/posts', 'ArticleController@index');
 
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
