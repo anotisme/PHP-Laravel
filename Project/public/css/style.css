@@ -585,7 +585,7 @@ a:hover, a:focus, .post-meta-two a:hover {
     transition: .5s all;
     color: #fff;
 }
-.grid-block div {
+.grid-block > div {
     padding: 0;
 }
 .icon-link:before {

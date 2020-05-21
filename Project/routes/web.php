@@ -31,4 +31,6 @@ Route::group(['prefix' => 'admin'], function () {
 
 Auth::routes();
 
+// dd(Voyager::routes()); die();
+
 Route::get('/home', 'HomeController@index')->name('home');

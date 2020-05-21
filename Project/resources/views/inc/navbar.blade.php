@@ -3,7 +3,9 @@
         <div class="row">
             <div class="col-md-2 col-sm-12">
                 <div class="site-logo">
-                    <img class="sh-standard-logo" src="//cdn.jevelin.shufflehound.com/wp-content/uploads/2016/05/Je_Logo_black_big.png" alt="Jevelin WordPress Theme" height="23">
+                    <a href="/">
+                        <img class="sh-standard-logo" src="//cdn.jevelin.shufflehound.com/wp-content/uploads/2016/05/Je_Logo_black_big.png" alt="Jevelin WordPress Theme" height="23">
+                    </a>
                 </div>
             </div>
             <div class="col-md-10 col-sm-12">
@@ -19,7 +21,7 @@
                             <a href="/portfolio">Porfolio</a>
                         </li>
                         <li class="menu-item sh-nav-cart sh-nav-special sh-header-builder-main-element-cart">
-                            <a href="https://jevelin.shufflehound.com/shop/cart/" class="sf-with-ul">
+                            <a href="/shop/cart/" class="sf-with-ul">
                                 <div class="sh-nav-cart-content">
                                     <i class="fa fa-shopping-basket" aria-hidden="true"></i>
                                     <div class="sh-header-cart-count cart-icon sh-group">
