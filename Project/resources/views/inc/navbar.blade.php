@@ -15,7 +15,7 @@
                             <a href="/">Home</a>
                         </li>
                         <li class="menu-item">
-                            <a href="/shop">Shop</a>
+                            <a href="{{ route('shop') }}">Shop</a>
                         </li>
                         <li class="menu-item">
                             <a href="/portfolio">Porfolio</a>

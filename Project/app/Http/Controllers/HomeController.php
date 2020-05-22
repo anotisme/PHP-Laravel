@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Article;
+use App\News;
 
 use Illuminate\Http\Request;
 
@@ -25,6 +26,14 @@ class HomeController extends Controller
     public function index()
     {
         $articles = Article::all();
-        return view('home', ['articles' => $articles]);
+        $news = News::all();
+        return view('home', ['articles' => $articles, 'news' => $news]);
+    }
+
+    public function showNews()
+    {
+        $news = News::all();
+
+        return view('home', compact('news'));
     }
 }

@@ -60,7 +60,7 @@
                         </div>
 	                </div>
                     <div class="grid-block" style="position: relative; height: 505px; opacity: 1;">
-                        <div class="fw-col-xs-12 fw-col-md-3">
+                        <div class="fw-col-xs-12 fw-col-sm-3 fw-col-md-3">
                             <div class="category-design category-life-work category-misc sh-portfolio-item sh-portfolio-masonry2 sh-portfolio-overlay-style-overlay4">
                                 <div class="sh-portfolio-image">
                                     <div class="sh-portfolio-image-position">
@@ -95,7 +95,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="fw-col-xs-12 fw-col-md-3">
+                        <div class="fw-col-xs-12 fw-col-sm-3 fw-col-md-3">
                             <div class="category-design category-life-work category-misc sh-portfolio-item sh-portfolio-masonry2 sh-portfolio-overlay-style-overlay4">
                                 <div class="sh-portfolio-image">
                                     <div class="sh-portfolio-image-position">
@@ -129,7 +129,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="fw-col-xs-12 fw-col-md-3">
+                        <div class="fw-col-xs-12 fw-col-sm-3 fw-col-md-3">
                             <div class="category-design category-life-work category-misc sh-portfolio-item sh-portfolio-masonry2 sh-portfolio-overlay-style-overlay4">
                                 <div class="sh-portfolio-image">
                                     <div class="sh-portfolio-image-position">
@@ -163,7 +163,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="fw-col-xs-12 fw-col-md-3">
+                        <div class="fw-col-xs-12 fw-col-sm-3 fw-col-md-3">
                             <div class="category-design category-life-work category-misc sh-portfolio-item sh-portfolio-masonry2 sh-portfolio-overlay-style-overlay4">
                                 <div class="sh-portfolio-image">
                                     <div class="sh-portfolio-image-position">

@@ -1,5 +1,6 @@
 <?php
 use App\Article;
+use App\News;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +15,8 @@ use App\Article;
 Route::get('/', function () {
     // return view('home');
     $articles = Article::all();
-    return View::make('home', array('articles' => $articles));
+    $news = News::all();
+    return View::make('home', array('articles' => $articles, 'news' => $news));
 });
 Route::get('/contact', function () {
     return view('pages.contact');
@@ -34,3 +36,7 @@ Auth::routes();
 // dd(Voyager::routes()); die();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/shop', 'ProductController@index')->name('shop');
+
+Route::get('/news', 'NewsController@index')->name('news');
