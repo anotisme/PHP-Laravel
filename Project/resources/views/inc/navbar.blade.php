@@ -43,10 +43,10 @@
                             <a href="http://www.twitter.com/TheShufflehound" target="_blank" class="social-media-twitter">
                                 <i class="fa fa-twitter" aria-hidden="true"></i>
                             </a>
-                            <a href="https://www.facebook.com/shufflehound" target="_blank" class="social-media-facebook">
+                            <a href="https://www.facebook.com/not.aquarius.1997" target="_blank" class="social-media-facebook">
                                 <i class="fa fa-facebook-official" aria-hidden="true"></i>
                             </a>
-                            <a href="http://jevelin.shufflehound.com" target="_blank" class="social-media-instagram">
+                            <a href="https://www.instagram.com/anotisme1997/" target="_blank" class="social-media-instagram">
                                 <i class="fa fa-instagram" aria-hidden="true"></i>
                             </a>
                             <div class="sh-clear"></div>

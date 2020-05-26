@@ -10,14 +10,13 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::all();
-        $articles_cate1 = Article::where('category','Test1')->get();
-        return view('pages.article', ['articles' => $articles, 'articles_cate1' => $articles_cate1]);
-        // return Article::all();
+        return view('pages.article', ['articles' => $articles]);
     }
 
-    public function show(Article $article)
+    public function show($id)
     {
-        return $article;
+        $article = Article::find($id);
+        return view('pages.article-detail', ['article' => $article]);
     }
 
     public function store(Request $request)

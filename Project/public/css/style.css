@@ -806,3 +806,9 @@ i.fa {
 .blog-news {
     padding: 130px 0px 130px 0px;
 }
+.home, .our-infor {
+    margin: 0 0.5rem;
+
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 4s; /* don't forget to set a duration! */
+}

@@ -10,7 +10,7 @@
             <div class="col-sm-12 col-md-4 home-box">
                 <div class="column-wrapper">
                     <div class="box-icon">
-                        <a href="#"><img src="" alt=""></a>
+                        <a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i></a>
                     </div>
                     <div class="box-aside">
                         <div class="sh-iconbox-title">
@@ -26,7 +26,7 @@
             <div class="col-sm-12 col-md-4 home-box">
                 <div class="column-wrapper">
                     <div class="box-icon">
-                        <a href="#"><img src="" alt=""></a>
+                        <a href="#"><i class="fa fa-gift" aria-hidden="true"></i></a>
                     </div>
                     <div class="box-aside">
                         <div class="sh-iconbox-title">
@@ -42,7 +42,7 @@
             <div class="col-sm-12 col-md-4 home-box">
                 <div class="column-wrapper">
                     <div class="box-icon">
-                        <a href="#"><img src="" alt=""></a>
+                        <a href="#"><i class="fa fa-diamond" aria-hidden="true"></i></a>
                     </div>
                     <div class="box-aside">
                         <div class="sh-iconbox-title">

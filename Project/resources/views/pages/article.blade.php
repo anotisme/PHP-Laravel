@@ -1,72 +1,69 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="post-style">
-        {{ dd($articles) }}
-        <div class="style1">
-            <a href="#">Category</a>
-            <div class="card-deck more-posts-deck">
-                <div class="row">
-                    @foreach ($articles_cate1 as $article_cate1)
-                    <div class="col-md-4">
-                        <article class="post-59 post type-post status-publish format-standard has-post-thumbnail hentry category-world tag-amet tag-dolor tag-ipsum tag-lorem tag-sit">
-
-                            <a href="https://litmotion.net/demo/neori-lite/in-ultricies-nunc-ut-mi-finibus-congue-porttitor-vec/">
-                                <img width="768" height="200" src="https://litmotion.net/demo/neori-lite/wp-content/uploads/2019/05/18-768x523.jpg" class="card-img-top wp-post-image" alt="" >
-                            </a>
-
-                            <div class="card-body">
-                                <h3 class="card-title">
-                                    <a href="https://litmotion.net/demo/neori-lite/in-ultricies-nunc-ut-mi-finibus-congue-porttitor-vec/">{{ $article_cate1['title'] }}</a>
-                                </h3>
-                                <p class="card-text">{{ $article_cate1['body'] }}</p>
-                                <p class="card-meta">
-                                    <img alt="" src="https://secure.gravatar.com/avatar/ee009ffd2d2d1827217bf8c3a968fd16?s=20&amp;d=mm&amp;r=g" class="useravatar avatar-20 photo" height="20" width="20">
-                                    <span class="author">
-                                        <a href="https://litmotion.net/demo/neori-lite/author/admin/" title="Posts by Lora" rel="author">Lora</a>
-                                    </span>
-                                    <span class="date">May 8, 2019</span>
-                                </p><!-- /.card-meta -->
-                            </div><!-- /.card-body -->
-                        </article>
-                    </div>
-                    @endforeach
-                </div><!-- /.card -->
+<div class="top-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-md-8">
+                <h3>All articles</h3>
             </div>
-        </div>
-        <div class="style2">
-            <a href="#">Category</a>
-            <?php
-                $post1 = \DB::table('articles')->where('category', 'Test1')->first();
-                $post2 = \DB::table('articles')->where('category', 'Test1')->get(); ?>
-            <div class="card-deck more-posts-deck">
-                <div class="row">
-                    @foreach ($articles_cate1 as $article_cate1)
-                    <div class="col-md-4">
-                        <article class="post-59 post type-post status-publish format-standard has-post-thumbnail hentry category-world tag-amet tag-dolor tag-ipsum tag-lorem tag-sit">
-
-                            <a href="https://litmotion.net/demo/neori-lite/in-ultricies-nunc-ut-mi-finibus-congue-porttitor-vec/">
-                                <img width="768" height="200" src="https://litmotion.net/demo/neori-lite/wp-content/uploads/2019/05/18-768x523.jpg" class="card-img-top wp-post-image" alt="" >
-                            </a>
-
-                            <div class="card-body">
-                                <h3 class="card-title">
-                                    <a href="https://litmotion.net/demo/neori-lite/in-ultricies-nunc-ut-mi-finibus-congue-porttitor-vec/">{{ $article_cate1['title'] }}</a>
-                                </h3>
-                                <p class="card-text">{{ $article_cate1['body'] }}</p>
-                                <p class="card-meta">
-                                    <img alt="" src="https://secure.gravatar.com/avatar/ee009ffd2d2d1827217bf8c3a968fd16?s=20&amp;d=mm&amp;r=g" class="useravatar avatar-20 photo" height="20" width="20">
-                                    <span class="author">
-                                        <a href="https://litmotion.net/demo/neori-lite/author/admin/" title="Posts by Lora" rel="author">Lora</a>
-                                    </span>
-                                    <span class="date">May 8, 2019</span>
-                                </p><!-- /.card-meta -->
-                            </div><!-- /.card-body -->
-                        </article>
-                    </div>
-                    @endforeach
-                </div><!-- /.card -->
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                breadcrumb
             </div>
         </div>
     </div>
+</div>
+<div id="content" class="content-with-sidebar-right blog-page-list center-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-md-8">
+            @foreach ($articles as $article)
+                <div class="post-container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-5">
+                            <a href="/articles/{{ $article->id }}">
+                                <img src="/storage/{{ $article->image }}" class="card-img-top wp-post-image" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-7">
+                            <div class="post-right-side">
+                                <a href="/articles/{{ $article->id }}" class="post-title">
+                                    <h2 itemprop="headline">{{ $article->title }}</h2>
+                                </a>
+                                <div class="post-meta post-meta-one">
+                                    <span class="post-meta-author">by
+                                        <a href="https://jevelin.shufflehound.com/author/shufflehound/" class="bypostauthor" itemprop="url" rel="author">
+                                            shufflehound
+                                        </a>
+                                    </span>
+                                    <time class="updated semantic" itemprop="dateModified" datetime="{{ $article->created_at }}"></time>
+                                    <a href="/articles/{{ $article->id }}" class="post-meta-date sh-default-color">{{ date('M d, Y', strtotime($article->created_at)) }}</a>
+                                </div>
+                                <div class="post-content" itemprop="text">
+                                    {{ str_limit(strip_tags($article->body), 200) }}
+                                </div>
+                                <div class="post-meta post-meta-two">
+                                    <div class="sh-columns post-meta-comments">
+                                        <span class="post-meta-categories">
+                                            <i aria-hidden="true" class="fa fa-tags"></i>
+                                            <a href="https://jevelin.shufflehound.com/category/travel/" rel="category tag">{{ $article->category }}</a>
+                                        </span>
+                                        <meta itemprop="interactionCount" content="UserComments:0">
+                                        <a href="https://jevelin.shufflehound.com/team-retreat-at-ocean-spa/#comments" class="post-meta-comments">
+                                            <i aria-hidden="true" class="fa fa-comments-o"></i>0
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                @include('inc.sidebar')
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
