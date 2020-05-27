@@ -24,7 +24,7 @@
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <article class="post-item category-design category-news masonry-shadow" itemscope="itemscope" itemtype="http://schema.org/Article" aria-hidden="false" tabindex="0" role="tabpanel">
                     <div class="post-container">
-                        <span class="sh-popover-mini fadeIn animated" style="visibility: visible; animation-name: fadeIn;">{{ $article->category }}</span>
+                        <span class="sh-popover-mini fadeIn animated" style="visibility: visible; animation-name: fadeIn;">{{ $article->category->name }}</span>
                         <div class="post-meta-thumb">
                             <a href="/articles/{{ $article->id }}" class="post-title">
                                 <img width="1024" height="683" src="/storage/{{ $article->image }}" class="attachment-large size-large wp-post-image" alt="" srcset="" sizes="(max-width: 1024px) 100vw, 1024px">
@@ -50,7 +50,9 @@
                                 <div class="sh-columns post-meta-comments">
                                     <span class="post-meta-categories">
                                         <i class="fa fa-tags" aria-hidden="true"></i>
-                                        <a href="https://jevelin.shufflehound.com/category/design/" rel="category tag" tabindex="0">{{ $article->category }}</a>
+                                        <a href="/articles-category/{{ $article->articles_category }}" rel="category tag" tabindex="0">
+                                        {{ $article->category->name }}
+                                        </a>
                                     </span>
                                     <meta itemprop="interactionCount" content="UserComments:0">
                                     <a href="https://jevelin.shufflehound.com/discovering-the-space/#comments" class="post-meta-comments" tabindex="0">

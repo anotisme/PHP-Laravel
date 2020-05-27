@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Article;
+use App\ArticlesCategory;
 
 use Illuminate\Http\Request;
 
@@ -10,13 +11,17 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::all();
-        return view('pages.article', ['articles' => $articles]);
+        $articles_categories = ArticlesCategory::withCount('Article')->get();
+
+        return view('pages.article', ['articles' => $articles, 'articles_categories' => $articles_categories]);
     }
 
     public function show($id)
     {
         $article = Article::find($id);
-        return view('pages.article-detail', ['article' => $article]);
+        $articles_categories = ArticlesCategory::withCount('Article')->get();
+
+        return view('pages.article-detail', ['article' => $article, 'articles_categories' => $articles_categories]);
     }
 
     public function store(Request $request)

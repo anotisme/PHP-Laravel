@@ -12,27 +12,14 @@
         </form>
     </div>
     <div id="categories-3" class="widget-item widget_categories">
-        <h3 class="widget-title">Categories</h3>
+        <h3 class="widget-title">Articles categories</h3>
         <ul>
+            @foreach ($articles_categories as $articles_category)
             <li class="cat-item cat-item-24">
-                <a href="https://jevelin.shufflehound.com/category/animals/">Animals</a> (1)
-                <span class="count">1</span>
+                <a href="/articles-category/{{ $articles_category->name }}">{{ $articles_category->name }}</a> ({{ $articles_category->Article->count() }})
+                <span class="count">{{ $articles_category->Article->count() }}</span>
             </li>
-            <li class="cat-item cat-item-21"><a href="https://jevelin.shufflehound.com/category/design/">Design</a> (6)
-                <span class="count">6</span>
-            </li>
-            <li class="cat-item cat-item-28"><a href="https://jevelin.shufflehound.com/category/music/">Music</a> (2)
-                <span class="count">2</span>
-            </li>
-            <li class="cat-item cat-item-23"><a href="https://jevelin.shufflehound.com/category/news/">News</a> (4)
-                <span class="count">4</span>
-            </li>
-            <li class="cat-item cat-item-20"><a href="https://jevelin.shufflehound.com/category/travel/">Travel</a> (4)
-                <span class="count">4</span>
-            </li>
-            <li class="cat-item cat-item-1"><a href="https://jevelin.shufflehound.com/category/uncategorized/">Uncategorized</a> (3)
-                <span class="count">3</span>
-            </li>
+            @endforeach
         </ul>
     </div>
     <div id="portfolio-3" class="widget_social_links widget-item widget_portfolio">
@@ -50,14 +37,13 @@
                             <div class="sh-mini-overlay-container">
                                 <div class="sh-table-full">
                                     <div class="sh-table-cell">
-                                        <i class="icon-link"></i>
+                                        <i aria-hidden="true" class="fa fa-link"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-
                 <div class="sh-portfolio-widget-item">
                     <a href="https://jevelin.shufflehound.com/project/its-the-coast/" title="Brand in the bag" class="sh-portfolio-widget-background">
                         <div class="sh-ratio">
@@ -69,7 +55,25 @@
                             <div class="sh-mini-overlay-container">
                                 <div class="sh-table-full">
                                     <div class="sh-table-cell">
-                                        <i class="icon-link"></i>
+                                        <i aria-hidden="true" class="fa fa-link"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="sh-portfolio-widget-item">
+                    <a href="https://jevelin.shufflehound.com/project/its-the-coast/" title="Brand in the bag" class="sh-portfolio-widget-background">
+                        <div class="sh-ratio">
+                            <div class="sh-ratio-container sh-ratio-container-square">
+                                <div class="sh-ratio-content" style="background-image: url(https://cdn.jevelin.shufflehound.com/wp-content/uploads/2016/02/Portfolio_3-150x150.jpg);"></div>
+                            </div>
+                        </div>
+                        <div class="sh-mini-overlay">
+                            <div class="sh-mini-overlay-container">
+                                <div class="sh-table-full">
+                                    <div class="sh-table-cell">
+                                        <i aria-hidden="true" class="fa fa-link"></i>
                                     </div>
                                 </div>
                             </div>
@@ -93,10 +97,10 @@
         <div class="wrap-social">
             <h3 class="widget-title">Social Media</h3>
             <div class="sh-social-widgets">
-                <a href="http://www.twitter.com/TheShufflehound" class="sh-social-widgets-item" target="_blank">
+                <a href="https://www.facebook.com/not.aquarius.1997" class="sh-social-widgets-item" target="_blank">
                     <i aria-hidden="true" class="fa fa-facebook-official"></i>
                 </a>
-                <a href="https://www.facebook.com/not.aquarius.1997" class="sh-social-widgets-item" target="_blank">
+                <a href="#" class="sh-social-widgets-item" target="_blank">
                     <i aria-hidden="true" class="fa fa-twitter"></i>
                 </a>
                 <a href="https://www.instagram.com/anotisme1997/" class="sh-social-widgets-item" target="_blank">

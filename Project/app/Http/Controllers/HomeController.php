@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 use App\Article;
-use App\News;
 
 use Illuminate\Http\Request;
 
@@ -13,10 +12,10 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     /**
      * Show the application dashboard.
@@ -25,15 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
-        $news = News::all();
-        return view('home', ['articles' => $articles, 'news' => $news]);
-    }
+        $articles = Article::where('articles_category', 'Blog & News')->get();
 
-    public function showNews()
-    {
-        $news = News::all();
-
-        return view('home', compact('news'));
+        return view('home', ['articles' => $articles]);
     }
 }

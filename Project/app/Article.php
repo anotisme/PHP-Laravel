@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     //
-    protected $fillable = ['title', 'body', 'category'];
+    protected $table = 'articles';
+
+    public function Category()
+    {
+        return $this->belongsTo('App\ArticlesCategory', 'articles_category', 'name');
+    }
 }

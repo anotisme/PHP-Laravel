@@ -5,7 +5,9 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-md-8">
-                <h3>All articles</h3>
+            @foreach ($articles as $article)
+                <h3 class="category-heading">{{ $article->category->name }} articles</h3>
+            @endforeach
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4">
                 breadcrumb
@@ -21,7 +23,7 @@
                 <div class="post-container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-5">
-                            <a href="/articles/{{ $article->title }}">
+                            <a href="/articles/{{ $article->id }}">
                                 <img src="/storage/{{ $article->image }}" class="card-img-top wp-post-image" alt="" />
                             </a>
                         </div>
@@ -37,7 +39,7 @@
                                         </a>
                                     </span>
                                     <time class="updated semantic" itemprop="dateModified" datetime="{{ $article->created_at }}"></time>
-                                    <a href="/articles/{{ $article->title }}" class="post-meta-date sh-default-color">{{ date('M d, Y', strtotime($article->created_at)) }}</a>
+                                    <a href="/articles/{{ $article->id }}" class="post-meta-date sh-default-color">{{ date('M d, Y', strtotime($article->created_at)) }}</a>
                                 </div>
                                 <div class="post-content" itemprop="text">
                                     {{ str_limit(strip_tags($article->body), 200) }}

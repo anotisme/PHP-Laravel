@@ -39,21 +39,21 @@
                 <div class="sh-column-wrapper">
                     <div class="sh-filter-container sh-portfolio-filter-default">
                         <div class="sh-filter">
-                            <span class="sh-filter-item active" data-filter="*" data-href="https://jevelin.shufflehound.com/">
+                            <span class="sh-filter-item active" data-filter="*" data-href="#">
                                 <div class="sh-filter-item-content">All</div>
                             </span>
-                            <span class="sh-filter-item" data-filter=".category-commercial" data-href="https://jevelin.shufflehound.com/?category=commercial">
+                            <!-- <span class="sh-filter-item" data-filter=".category-commercial" data-href="#">
                                 <div class="sh-filter-item-content">Commercial</div>
                             </span>
-                            <span class="sh-filter-item" data-filter=".category-design" data-href="https://jevelin.shufflehound.com/?category=design">
+                            <span class="sh-filter-item" data-filter=".category-design" data-href="#">
                                 <div class="sh-filter-item-content">Design</div>
                             </span>
-                            <span class="sh-filter-item" data-filter=".category-life-work" data-href="https://jevelin.shufflehound.com/?category=life-work">
+                            <span class="sh-filter-item" data-filter=".category-life-work" data-href="#">
                                 <div class="sh-filter-item-content">Life &amp; Work</div>
                             </span>
-                            <span class="sh-filter-item" data-filter=".category-misc" data-href="https://jevelin.shufflehound.com/?category=misc">
+                            <span class="sh-filter-item" data-filter=".category-misc" data-href="#">
                                 <div class="sh-filter-item-content">Misc.</div>
-                            </span>
+                            </span> -->
                         </div>
                     </div>
                     <div id="pills-tabContent" >
@@ -68,16 +68,16 @@
                                             <div class="sh-portfolio-overlay4-container">
                                                 <div class="sh-portfolio-overlay4-title">Stack of bottles</div>
                                                 <div class="sh-portfolio-overlay4-categories">
-                                                    <a href="https://jevelin.shufflehound.com/portfolio/design/" class="sh-portfolio-category">Design</a>
+                                                    <a href="#" class="sh-portfolio-category">Design</a>
                                                     <span class="sh-whitespace-small"></span>
-                                                    <a href="https://jevelin.shufflehound.com/portfolio/life-work/" class="sh-portfolio-category">Life &amp; Work</a>
+                                                    <a href="#" class="sh-portfolio-category">Life &amp; Work</a>
                                                     <span class="sh-whitespace-small"></span>
-                                                    <a href="https://jevelin.shufflehound.com/portfolio/misc/" class="sh-portfolio-category">Misc.</a>
+                                                    <a href="#" class="sh-portfolio-category">Misc.</a>
                                                     <span class="sh-whitespace-small"></span>
                                                 </div>
 
                                                 <div class="sh-portfolio-overlay4-icons sh-table">
-                                                    <a href="https://jevelin.shufflehound.com/project/riding-the-waves/" class="sh-overlay-item sh-table-cell">
+                                                    <a href="#" class="sh-overlay-item sh-table-cell">
                                                         <div class="sh-overlay-item-container">
                                                             <i class="fa fa-link" aria-hidden="true"></i>
                                                         </div>
@@ -103,15 +103,16 @@
                                             <div class="sh-portfolio-overlay4-container">
                                                 <div class="sh-portfolio-overlay4-title">Stack of bottles</div>
                                                 <div class="sh-portfolio-overlay4-categories">
-                                                    <a href="https://jevelin.shufflehound.com/portfolio/design/" class="sh-portfolio-category">Design</a>
+                                                    <a href="#" class="sh-portfolio-category">Design</a>
                                                     <span class="sh-whitespace-small"></span>
-                                                    <a href="https://jevelin.shufflehound.com/portfolio/life-work/" class="sh-portfolio-category">Life &amp; Work</a>
-                                                    <span class="sh-whitespace-small"></span><a href="https://jevelin.shufflehound.com/portfolio/misc/" class="sh-portfolio-category">Misc.</a>
+                                                    <a href="#" class="sh-portfolio-category">Life &amp; Work</a>
+                                                    <span class="sh-whitespace-small"></span>
+                                                    <a href="#" class="sh-portfolio-category">Misc.</a>
                                                     <span class="sh-whitespace-small"></span>
                                                 </div>
 
                                                 <div class="sh-portfolio-overlay4-icons sh-table">
-                                                    <a href="https://jevelin.shufflehound.com/project/riding-the-waves/" class="sh-overlay-item sh-table-cell">
+                                                    <a href="#" class="sh-overlay-item sh-table-cell">
                                                         <div class="sh-overlay-item-container">
                                                             <i class="fa fa-link" aria-hidden="true"></i>
                                                         </div>
@@ -137,15 +138,16 @@
                                             <div class="sh-portfolio-overlay4-container">
                                                 <div class="sh-portfolio-overlay4-title">Stack of bottles</div>
                                                 <div class="sh-portfolio-overlay4-categories">
-                                                    <a href="https://jevelin.shufflehound.com/portfolio/design/" class="sh-portfolio-category">Design</a>
+                                                    <a href="#" class="sh-portfolio-category">Design</a>
                                                     <span class="sh-whitespace-small"></span>
-                                                    <a href="https://jevelin.shufflehound.com/portfolio/life-work/" class="sh-portfolio-category">Life &amp; Work</a>
-                                                    <span class="sh-whitespace-small"></span><a href="https://jevelin.shufflehound.com/portfolio/misc/" class="sh-portfolio-category">Misc.</a>
+                                                    <a href="#" class="sh-portfolio-category">Life &amp; Work</a>
+                                                    <span class="sh-whitespace-small"></span>
+                                                    <a href="#" class="sh-portfolio-category">Misc.</a>
                                                     <span class="sh-whitespace-small"></span>
                                                 </div>
 
                                                 <div class="sh-portfolio-overlay4-icons sh-table">
-                                                    <a href="https://jevelin.shufflehound.com/project/riding-the-waves/" class="sh-overlay-item sh-table-cell">
+                                                    <a href="#" class="sh-overlay-item sh-table-cell">
                                                         <div class="sh-overlay-item-container">
                                                             <i class="fa fa-link" aria-hidden="true"></i>
                                                         </div>
@@ -171,15 +173,16 @@
                                             <div class="sh-portfolio-overlay4-container">
                                                 <div class="sh-portfolio-overlay4-title">Stack of bottles</div>
                                                 <div class="sh-portfolio-overlay4-categories">
-                                                    <a href="https://jevelin.shufflehound.com/portfolio/design/" class="sh-portfolio-category">Design</a>
+                                                    <a href="#" class="sh-portfolio-category">Design</a>
                                                     <span class="sh-whitespace-small"></span>
-                                                    <a href="https://jevelin.shufflehound.com/portfolio/life-work/" class="sh-portfolio-category">Life &amp; Work</a>
-                                                    <span class="sh-whitespace-small"></span><a href="https://jevelin.shufflehound.com/portfolio/misc/" class="sh-portfolio-category">Misc.</a>
+                                                    <a href="#" class="sh-portfolio-category">Life &amp; Work</a>
+                                                    <span class="sh-whitespace-small"></span>
+                                                    <a href="#" class="sh-portfolio-category">Misc.</a>
                                                     <span class="sh-whitespace-small"></span>
                                                 </div>
 
                                                 <div class="sh-portfolio-overlay4-icons sh-table">
-                                                    <a href="https://jevelin.shufflehound.com/project/riding-the-waves/" class="sh-overlay-item sh-table-cell">
+                                                    <a href="#" class="sh-overlay-item sh-table-cell">
                                                         <div class="sh-overlay-item-container">
                                                             <i class="fa fa-link" aria-hidden="true"></i>
                                                         </div>

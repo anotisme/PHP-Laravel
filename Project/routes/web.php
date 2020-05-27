@@ -1,5 +1,4 @@
 <?php
-use App\Article;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,11 +10,13 @@ use App\Article;
 |
 */
 
-Route::get('/', function () {
-    // return view('home');
-    $articles = Article::where('category', 'Blog & News')->get();
-    return View::make('home', array('articles' => $articles));
-});
+// Route::get('/', function () {
+//     // return view('home');
+//     $articles = Article::where('articles_category', '2')->get();
+//     return View::make('home', ['articles' => $articles]);
+// });
+Route::get('/', 'HomeController@index');
+
 Route::get('/contact', function () {
     return view('pages.contact');
 });
@@ -40,5 +41,7 @@ Route::get('/shop', 'ProductController@index')->name('shop');
 Route::get('/news', 'NewsController@index')->name('news');
 
 Route::resource('articles','ArticleController');
+
+Route::resource('articles-category','ArticlesCategoryController');
 
 // Route::get('/articles/{post_slug}', 'ArticleController@show');
