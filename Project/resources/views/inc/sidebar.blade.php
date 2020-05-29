@@ -24,7 +24,7 @@
     </div>
     <div id="portfolio-3" class="widget_social_links widget-item widget_portfolio">
         <div class="wrap-portfolio">
-            <h3 class="widget-title">Latest Projects</h3>
+            <h3 class="widget-title">Products</h3>
             <div class="sh-portfolio-widget">
                 <div class="sh-portfolio-widget-item">
                     <a href="https://jevelin.shufflehound.com/project/riding-the-waves/" title="Stack of bottles" class="sh-portfolio-widget-background">

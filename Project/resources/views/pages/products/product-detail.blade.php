@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-md-8">
-                    <h3>Blog post</h3>
+                    <h3>Products</h3>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-md-4">
                     breadcrumb
@@ -17,14 +17,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-md-8">
-                    <div class="article-content">
+                    <div class="product-content">
                         <div class="post-meta-thumb">
-                            <a href="/storage/{{ $article['image'] }}" class="sh-overlay-item sh-table-cell" data-rel="lightcase">
-                                <img src="/storage/{{ $article['image'] }}" class="post-image" alt="">
+                            <a href="/storage/{{ $product->image }}" class="sh-overlay-item sh-table-cell" data-rel="lightcase">
+                                <img src="/storage/{{ $product->image }}" class="post-image" alt="">
                             </a>
                         </div>
-                        <a href="/articles/{{ $article->id }}" class="post-title">
-                            <h1 itemprop="headline">{{ $article->title }}</h1>
+                        <a href="/products/{{ $product->id }}" class="post-title">
+                            <h1 itemprop="headline">{{ $product->name }}</h1>
                         </a>
                         <div class="post-meta-data sh-columns">
                             <div class="post-meta post-meta-one">
@@ -33,14 +33,15 @@
                                         shufflehound
                                     </a>
                                 </span>
-                                <time class="updated semantic" itemprop="dateModified" datetime="{{ $article->created_at }}"></time>
-                                <a href="/articles/{{ $article->id }}" class="post-meta-date sh-default-color">{{ date('M d, Y', strtotime($article->created_at)) }}</a>
+                                <time class="updated semantic" itemprop="dateModified" datetime="{{ $product->created_at }}"></time>
+                                <a href="/products/{{ $product->id }}" class="post-meta-date sh-default-color">{{ date('M d, Y', strtotime($product->created_at)) }}</a>
                             </div>
                             <div class="post-meta post-meta-two">
                                 <div class="sh-columns post-meta-comments">
                                     <span class="post-meta-categories">
                                         <i aria-hidden="true" class="fa fa-tags"></i>
-                                        <a href="/articles-category/{{ $article->category->name }}" rel="category tag">{{ $article->category->name }}</a>
+                                        <?php $category = \DB::table('categories')->where('id', $product->category_id)->first(); ?>
+                                        <a href="/category/{{ $category->name }}" rel="category tag">{{ $category->name }}</a>
                                     </span>
                                     <meta itemprop="interactionCount" content="UserComments:0">
                                     <a href="#comments" class="post-meta-comments">
@@ -50,7 +51,7 @@
                             </div>
                         </div>
                         <div class="post-content" itemprop="text">
-                            {{ str_limit(strip_tags($article->body), 200) }}
+                            {{ str_limit(strip_tags($product->description), 200) }}
                         </div>
                     </div>
                     <div class="related-posts">
@@ -58,25 +59,25 @@
                             <h3>Related Posts</h3>
                         </div>
                         <?php
-                            $related_articles = \DB::table('articles')->where('articles_category', $article->category->name)
-                                                                      ->Where('id', '!=', $article->id)->get();
+                            $related_products = \DB::table('products')->where('category_id', $product->category_id)
+                                                                      ->Where('id', '!=', $product->id)->get();
                         ?>
                         <div class="row">
-                            @foreach ($related_articles as $related_article)
+                            @foreach ($related_products as $related_product)
                             <div class="col-xs-12 col-sm-4 col-md-4">
                                 <div class="post-container">
-                                    <span class="sh-popover-mini sh- fadeIn animated" style="visibility: visible; animation-name: fadeIn;">{{ $related_article->articles_category }}</span>
+                                    <span class="sh-popover-mini sh- fadeIn animated" style="visibility: visible; animation-name: fadeIn;">{{ $related_product->products_category }}</span>
                                     <div class="post-meta-thumb">
-                                        <img width="660" height="420" src="/storage/{{ $related_article->image }}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="">
+                                        <img width="660" height="420" src="/storage/{{ $related_product->image }}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="">
                                     </div>
-                                    <a href="/articles/{{ $related_article->id }}" class="post-title">
-                                        <h2 itemprop="headline">{{ str_limit($related_article->title, 20) }}</h2>
+                                    <a href="/products/{{ $related_product->id }}" class="post-title">
+                                        <h2 itemprop="headline">{{ str_limit($related_product->title, 20) }}</h2>
                                     </a>
                                     <div class="post-meta post-meta-two">
                                         <div class="sh-columns post-meta-comments">
                                             <span class="post-meta-categories">
                                                 <i aria-hidden="true" class="fa fa-tags"></i>
-                                                <a href="/articles-category/{{ $related_article->articles_category }}" rel="category tag">{{ $related_article->articles_category }}</a>
+                                                <a href="/products-category/{{ $related_product->products_category }}" rel="category tag">{{ $related_product->products_category }}</a>
                                             </span>
                                             <meta itemprop="interactionCount" content="UserComments:0">
                                             <a href="#comments" class="post-meta-comments">

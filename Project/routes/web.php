@@ -42,6 +42,10 @@ Route::get('/news', 'NewsController@index')->name('news');
 
 Route::resource('articles','ArticleController');
 
+Route::resource('products','ProductController');
+
+Route::resource('category','CategoryController');
+
 Route::resource('articles-category','ArticlesCategoryController');
 
 // Route::get('/articles/{post_slug}', 'ArticleController@show');
