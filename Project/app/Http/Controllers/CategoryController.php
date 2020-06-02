@@ -12,7 +12,7 @@ class CategoryController extends Controller
     //
     public function index()
     {
-        $products = Product::all();
+        $products = Product::limit(4)->get();
         $articles_categories = ArticlesCategory::withCount('Article')->get();
 
         return view('pages.category.category', ['products' => $products, 'articles_categories' => $articles_categories]);
@@ -20,9 +20,10 @@ class CategoryController extends Controller
 
     public function show($name)
     {
+        $products = Product::limit(4)->get();
         $products_by_category = Category::where('name', $name)->first();
         $articles_categories = ArticlesCategory::withCount('Article')->get();
 
-        return view('pages.category.product-category', ['products_by_category' => $products_by_category, 'articles_categories' => $articles_categories]);
+        return view('pages.category.product-category', ['products' => $products, 'products_by_category' => $products_by_category, 'articles_categories' => $articles_categories]);
     }
 }

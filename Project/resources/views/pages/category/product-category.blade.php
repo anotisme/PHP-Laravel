@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-md-8">
-                <h3 class="category-heading"> categories</h3>
+                <h3 class="category-heading">{{ $products_by_category->name }} categories</h3>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4">
                 breadcrumb
@@ -22,13 +22,13 @@
                 <div class="post-container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-5">
-                            <a href="/products/{{ $product->id }}">
+                            <a href="/products/{{ $product->name }}">
                                 <img src="/storage/{{ $product->image }}" class="card-img-top wp-post-image" alt="" />
                             </a>
                         </div>
                         <div class="col-xs-12 col-sm-7">
                             <div class="post-right-side">
-                                <a href="/categories/{{ $product->id }}" class="post-title">
+                                <a href="/products/{{ $product->name }}" class="post-title">
                                     <h2 itemprop="headline">{{ $product->name }}</h2>
                                 </a>
                                 <div class="post-meta post-meta-one">

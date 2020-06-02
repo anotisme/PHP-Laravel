@@ -22,66 +22,35 @@
             @endforeach
         </ul>
     </div>
-    <div id="portfolio-3" class="widget_social_links widget-item widget_portfolio">
-        <div class="wrap-portfolio">
-            <h3 class="widget-title">Products</h3>
-            <div class="sh-portfolio-widget">
-                <div class="sh-portfolio-widget-item">
-                    <a href="https://jevelin.shufflehound.com/project/riding-the-waves/" title="Stack of bottles" class="sh-portfolio-widget-background">
-                        <div class="sh-ratio">
-                            <div class="sh-ratio-container sh-ratio-container-square">
-                                <div class="sh-ratio-content" style="background-image: url(https://cdn.jevelin.shufflehound.com/wp-content/uploads/2016/02/Portfolio_2_2-150x150.jpg);"></div>
-                            </div>
-                        </div>
-                        <div class="sh-mini-overlay">
-                            <div class="sh-mini-overlay-container">
-                                <div class="sh-table-full">
-                                    <div class="sh-table-cell">
-                                        <i aria-hidden="true" class="fa fa-link"></i>
-                                    </div>
+    <div id="woocommerce_products-2" class="widget-item woocommerce widget_products">
+        <h3 class="widget-title">Products</h3>
+        <ul class="product_list_widget">
+        @foreach ($products as $product)
+            <li>
+                <a href="/products/{{ $product->name }}">
+                    <div class="sh-mini-overlay">
+                        <div class="sh-mini-overlay-container">
+                            <div class="sh-table-full">
+                                <div class="sh-table-cell">
+                                    <i aria-hidden="true" class="fa fa-link"></i>
                                 </div>
                             </div>
                         </div>
-                    </a>
-                </div>
-                <div class="sh-portfolio-widget-item">
-                    <a href="https://jevelin.shufflehound.com/project/its-the-coast/" title="Brand in the bag" class="sh-portfolio-widget-background">
-                        <div class="sh-ratio">
-                            <div class="sh-ratio-container sh-ratio-container-square">
-                                <div class="sh-ratio-content" style="background-image: url(https://cdn.jevelin.shufflehound.com/wp-content/uploads/2016/02/Portfolio_3-150x150.jpg);"></div>
-                            </div>
-                        </div>
-                        <div class="sh-mini-overlay">
-                            <div class="sh-mini-overlay-container">
-                                <div class="sh-table-full">
-                                    <div class="sh-table-cell">
-                                        <i aria-hidden="true" class="fa fa-link"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="sh-portfolio-widget-item">
-                    <a href="https://jevelin.shufflehound.com/project/its-the-coast/" title="Brand in the bag" class="sh-portfolio-widget-background">
-                        <div class="sh-ratio">
-                            <div class="sh-ratio-container sh-ratio-container-square">
-                                <div class="sh-ratio-content" style="background-image: url(https://cdn.jevelin.shufflehound.com/wp-content/uploads/2016/02/Portfolio_3-150x150.jpg);"></div>
-                            </div>
-                        </div>
-                        <div class="sh-mini-overlay">
-                            <div class="sh-mini-overlay-container">
-                                <div class="sh-table-full">
-                                    <div class="sh-table-cell">
-                                        <i aria-hidden="true" class="fa fa-link"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+                    </div>
+                    <img width="300" height="300" src="/storage/{{ $product->image }}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" sizes="(max-width: 300px) 100vw, 300px">
+                    <span class="product-title">{{ $product->name }}</span>
+                </a>
+                <del>
+                    <span class="woocommerce-Price-amount amount">
+                    <span class="woocommerce-Price-currencySymbol">$</span>{{ $product->price }}</span>
+                </del>
+                <ins>
+                    <span class="woocommerce-Price-amount amount">
+                    <span class="woocommerce-Price-currencySymbol">$</span>{{ $product->price }}</span>
+                </ins>
+            </li>
+        @endforeach
+        </ul>
     </div>
     <div id="image-3" class="widget_social_links widget-item widget_image">
         <div class="wrap-image">

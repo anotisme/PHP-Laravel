@@ -11,7 +11,7 @@ class ProductController extends Controller
     //
     public function index()
     {
-        $products = Product::all();
+        $products = Product::simplePaginate(9);
         $articles_categories = ArticlesCategory::withCount('Article')->get();
 
         return view('pages.products.shop', ['products' => $products, 'articles_categories' => $articles_categories]);
@@ -19,9 +19,10 @@ class ProductController extends Controller
 
     public function show($name)
     {
+        $products = Product::limit(4)->get();
         $product = Product::where('name', $name)->first();
         $articles_categories = ArticlesCategory::withCount('Article')->get();
 
-        return view('pages.products.product-detail', ['product' => $product, 'articles_categories' => $articles_categories]);
+        return view('pages.products.product-detail', ['products' => $products, 'product' => $product, 'articles_categories' => $articles_categories]);
     }
 }

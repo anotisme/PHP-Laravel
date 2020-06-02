@@ -2051,7 +2051,78 @@ a.post-meta-comments {
     }
 }
 // Sidebar
+.woocommerce {
+    .product-title {
+        transition: .3s all ease-in-out;
+    }
+    ul.product_list_widget {
+        list-style: none outside;
+        padding: 0;
+        margin: 0;
+        li {
+            padding: 4px 0;
+            margin: 0;
+            list-style: none;
+            width: 100%;
+            display: block;
+            position: relative;
+            margin-bottom: 15px!important;
+            min-height: 65px!important;
+            padding-left: 85px!important;
+            a {
+                display: block;
+                font-weight: 700;
+                color: #8d8d8d!important;
+                img {
+                    position: absolute;
+                    width: 65px!important;
+                    margin-left: 0!important;
+                    left: 0;
+                    margin: 0 0 1.5em;
+                }
+            }
+        }
+    }
+    span {
+        color: #505050!important;
+    }
+}
+ins {
+    text-decoration: none;
+}
+.center-area {
+    .product-content {
+        padding-top: 0;
+    }
+}
+.sh-related-posts-title {
+    padding-bottom: 30px;
+}
 #sidebar {
+    .product_list_widget {
+        .sh-mini-overlay-container {
+            position: absolute;
+            top: 5px;
+            width: 19%;
+            right: 0px;
+            left: 0;
+            bottom: -5px;
+            background-color: rgba(71, 201, 229, 0.75);
+            text-align: center;
+            opacity: 0;
+            border-radius: 0;
+            z-index: 9;
+        }
+    }
+    .product_list_widget {
+        li {
+            &:hover {
+                .sh-mini-overlay-container {
+                    opacity: 1;
+                }
+            }
+        }
+    }
     .widget-item {
         padding-bottom: 45px;
         li, .sh-recent-posts-widgets-item {
@@ -2105,6 +2176,177 @@ a.post-meta-comments {
     i {
         font-size: 19px;
         line-height: 50px;
+    }
+}
+// Product
+.product-content {
+    .pagination {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
+.product {
+    .product_title {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ebebeb;
+        clear: none;
+        margin-top: 0;
+    }
+    .woocommerce-product-rating {
+        line-height: 34px;
+        float: right;
+        text-align: right;
+        margin-bottom: 0!important;
+        position: relative;
+        display: block;
+        > div {
+            float: none!important;
+            display: inline-block;
+        }
+        .star-rating {
+            margin-top: 0;
+            font-size: 18px!important;
+            margin-top: 0;
+            margin-bottom: 0;
+            position: relative;
+            bottom: -2px;
+            letter-spacing: 4px;
+            width: 110px;
+            margin: .5em 4px 0 0;
+            float: left;
+            float: right;
+            overflow: hidden;
+            position: relative;
+            height: 1em;
+            line-height: 1;
+            font-size: 1em;
+            width: 5.4em;
+            font-family: star;
+            .fa-star-o {
+                color: #294cff;
+            }
+        }
+    }
+    #nav-info {
+        table {
+            width: 100%;
+            border: 2px solid #e5e5e5;
+            border-radius: 0;
+            border-collapse: collapse;
+            th {
+                padding: 15px 20px;
+                font-weight: 700;
+                margin: 0;
+                line-height: 1.5;
+                border: 1px solid #e5e5e5;
+                td {
+                    font-style: italic;
+                    padding: 0;
+                    border-top: 0;
+                    border-bottom: 1px dotted rgba(0,0,0,.1);
+                    margin: 0;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+    .wc-tabs {
+        a {
+            font-size: 14px;
+            font-weight: 700;
+        }
+        .active {
+            color: #294cff!important;
+        }
+    }
+    .price {
+        line-height: 30px;
+        margin-bottom: 0;
+        min-height: 32px;
+        color: #77a464;
+        font-size: 1.25em;
+        span {
+            color: #505050!important;
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+    .woo-seperator-line {
+        margin-top: 20px;
+        padding-top: 30px;
+        border-top: 1px solid #ebebeb;
+    }
+    .woo-short-description,
+    form.cart {
+        margin-bottom: 30px;
+    }
+    .sh-noselect {
+        cursor: pointer;
+        font-size: 16px;
+        transition: .25s all;
+        background-color: #f2f2f2;
+        border-radius: 50px;
+        color: #89898a;
+        line-height: 55px;
+    }
+    .sh-increase-numbers {
+        input,
+        span {
+            float: left;
+            display: block!important;
+            width: 50px!important;
+            height: 50px;
+            text-align: center;
+        }
+        input {
+            border-width: 0;
+            font-size: 16px!important;
+            font-weight: 700;
+            padding: 0!important;
+            background-color: transparent;
+        }
+        .sh-quantity-number {
+            display: none;
+        }
+    }
+    .cart {
+        button {
+            line-height: 50px!important;
+            padding: 0 25px!important;
+            border-radius: 100px!important;
+            font-size: 13px;
+            text-transform: uppercase;
+            background-color: #294cff!important;
+            color: #fff;
+            -webkit-font-smoothing: antialiased;
+            margin: 0 50px;
+            border: 0;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+    .woo-meta-title {
+        color: #505050;
+        display: inline-block;
+        font-weight: 700;
+        margin-top: 0;
+    }
+    .product_meta {
+        padding-bottom: 30px;
+    }
+    .tab-content {
+        padding-top: 20px;
+    }
+    a {
+        text-transform: uppercase;
+        font-size: 13px;
+        color: #8d8d8d;
+    }
+    h2 {
+        font-size: 16px;
+        margin-bottom: 15px;
     }
 }
 // Category
@@ -2287,6 +2529,7 @@ a.post-meta-comments {
     .product-item {
         position: relative;
         transition: .3s all ease-in-out;
+        margin-bottom: 20px;
         &:hover {
             bottom: -4px;
         }
