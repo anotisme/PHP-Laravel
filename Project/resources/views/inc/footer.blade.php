@@ -1,3 +1,6 @@
+<?php
+use App\Article;
+?>
 <!-- Footer -->
 <footer class="page-footer font-small unique-color-dark">
     <div class="" style="background-color: #6351ce;">
@@ -59,12 +62,16 @@
                 <div class="wrap-recent-posts">
                     <h3 class="widget-title">Recent Posts</h3>
                     <div class="sh-recent-posts-widgets">
+                        <?php
+                                $articles = Article::with('Category')->limit(3)->get();
+                        ?>
+                        @foreach ($articles as $article)
                         <div class="sh-recent-posts-widgets-item">
                             <div class="sh-recent-posts-widgets-item-thumb">
-                                <a href="https://jevelin.shufflehound.com/team-retreat-at-ocean-spa/">
+                                <a href="/articles/{{ $article->title }}">
                                     <div class="sh-ratio">
                                         <div class="sh-ratio-container sh-ratio-container-square">
-                                            <div class="sh-ratio-content" style="background-image: url(https://cdn.jevelin.shufflehound.com/wp-content/uploads/2016/02/Blog_1-150x150.jpg);"></div>
+                                            <img class="sh-ratio-content" src="/storage/{{ $article->image }}" alt="">
                                         </div>
                                     </div>
                                     <div class="sh-mini-overlay">
@@ -76,18 +83,19 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="sh-recent-posts-widgets-count">0</div>
+                                    <div class="sh-recent-posts-widgets-count">{{ $article->Category->count() }}</div>
                                 </a>
                             </div>
                             <div class="sh-recent-posts-widgets-item-content">
                                 <span class="post-meta-categories">
-                                    <a href="https://jevelin.shufflehound.com/category/travel/" rel="category tag">Travel</a>
+                                    <a href="/articles-category/{{ $article->articles_category }}" rel="category tag">{{ $article->category->name }}</a>
                                 </span>
-                                <a href="https://jevelin.shufflehound.com/team-retreat-at-ocean-spa/">
-                                    <h6>The team watchers</h6>
+                                <a href="/articles/{{ $article->title }}">
+                                    <h6>{{ $article->title }}</h6>
                                 </a>
                             </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -95,30 +103,13 @@
                 <div class="wrap-portfolio">
                     <h3 class="widget-title">Latest Projects</h3>
                     <div class="sh-portfolio-widget">
+                        <?php $projects = \DB::table('projects')->limit(9)->get(); ?>
+                        @foreach ($projects as $project)
                         <div class="sh-portfolio-widget-item">
-                            <a href="https://jevelin.shufflehound.com/project/riding-the-waves/" title="Stack of bottles" class="sh-portfolio-widget-background">
+                            <a href="/projects/{{ $project->name }}" title="Stack of bottles" class="sh-portfolio-widget-background">
                                 <div class="sh-ratio">
                                     <div class="sh-ratio-container sh-ratio-container-square">
-                                        <div class="sh-ratio-content" style="background-image: url(https://cdn.jevelin.shufflehound.com/wp-content/uploads/2016/02/Portfolio_2_2-150x150.jpg);"></div>
-                                    </div>
-                                </div>
-                                <div class="sh-mini-overlay">
-                                    <div class="sh-mini-overlay-container">
-                                        <div class="sh-table-full">
-                                            <div class="sh-table-cell">
-                                                <i aria-hidden="true" class="fa fa-link"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-					    </div>
-                        <div class="sh-portfolio-widget-item">
-                            <a href="https://jevelin.shufflehound.com/project/its-the-coast/" title="Brand in the bag" class="sh-portfolio-widget-background">
-
-                                <div class="sh-ratio">
-                                    <div class="sh-ratio-container sh-ratio-container-square">
-                                        <div class="sh-ratio-content" style="background-image: url(https://cdn.jevelin.shufflehound.com/wp-content/uploads/2016/02/Portfolio_3-150x150.jpg);"></div>
+                                        <img class="sh-ratio-content" src="/storage/{{ $project->image }}" alt="">
                                     </div>
                                 </div>
                                 <div class="sh-mini-overlay">
@@ -132,116 +123,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="sh-portfolio-widget-item">
-                            <a href="https://jevelin.shufflehound.com/project/the-green-road/" title="Mock up of the web" class="sh-portfolio-widget-background">
-                                <div class="sh-ratio">
-                                    <div class="sh-ratio-container sh-ratio-container-square">
-                                        <div class="sh-ratio-content" style="background-image: url(https://cdn.jevelin.shufflehound.com/wp-content/uploads/2016/02/Portfolio_6_4-150x150.jpg);"></div>
-                                    </div>
-                                </div>
-                                <div class="sh-mini-overlay">
-                                    <div class="sh-mini-overlay-container">
-                                        <div class="sh-table-full">
-                                            <div class="sh-table-cell">
-                                                <i aria-hidden="true" class="fa fa-link"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sh-portfolio-widget-item">
-                            <a href="https://jevelin.shufflehound.com/project/pilot-in-the-sky/" title="Books and covers" class="sh-portfolio-widget-background">
-                                <div class="sh-ratio">
-                                    <div class="sh-ratio-container sh-ratio-container-square">
-                                        <div class="sh-ratio-content" style="background-image: url(https://cdn.jevelin.shufflehound.com/wp-content/uploads/2016/02/Paperback-Book-Mockup-vol-2-150x150.jpg);"></div>
-                                    </div>
-                                </div>
-                                <div class="sh-mini-overlay">
-                                    <div class="sh-mini-overlay-container">
-                                        <div class="sh-table-full">
-                                            <div class="sh-table-cell">
-                                                <i aria-hidden="true" class="fa fa-link"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sh-portfolio-widget-item">
-                            <a href="https://jevelin.shufflehound.com/project/vintage-typewriter/" title="Notebook design" class="sh-portfolio-widget-background">
-
-                                <div class="sh-ratio">
-                                    <div class="sh-ratio-container sh-ratio-container-square">
-                                        <div class="sh-ratio-content" style="background-image: url(https://cdn.jevelin.shufflehound.com/wp-content/uploads/2016/01/Portfolio_5_1-150x150.jpg);"></div>
-                                    </div>
-                                </div>
-                                <div class="sh-mini-overlay">
-                                    <div class="sh-mini-overlay-container">
-                                        <div class="sh-table-full">
-                                            <div class="sh-table-cell">
-                                                <i aria-hidden="true" class="fa fa-link"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sh-portfolio-widget-item">
-                            <a href="https://jevelin.shufflehound.com/project/multitasking-at-work/" title="Three mock up stack" class="sh-portfolio-widget-background">
-                                <div class="sh-ratio">
-                                    <div class="sh-ratio-container sh-ratio-container-square">
-                                        <div class="sh-ratio-content" style="background-image: url(https://cdn.jevelin.shufflehound.com/wp-content/uploads/2016/01/Portfolio_6-150x150.jpg);"></div>
-                                    </div>
-                                </div>
-                                <div class="sh-mini-overlay">
-                                    <div class="sh-mini-overlay-container">
-                                        <div class="sh-table-full">
-                                            <div class="sh-table-cell">
-                                                <i aria-hidden="true" class="fa fa-link"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sh-portfolio-widget-item">
-                            <a href="https://jevelin.shufflehound.com/project/the-rising-hound/" title="Office composition" class="sh-portfolio-widget-background">
-
-                                <div class="sh-ratio">
-                                    <div class="sh-ratio-container sh-ratio-container-square">
-                                        <div class="sh-ratio-content" style="background-image: url(https://cdn.jevelin.shufflehound.com/wp-content/uploads/2016/01/photo-1455612810508-8faae6db6455-150x150.jpg);"></div>
-                                    </div>
-                                </div>
-                                <div class="sh-mini-overlay">
-                                    <div class="sh-mini-overlay-container">
-                                        <div class="sh-table-full">
-                                            <div class="sh-table-cell">
-                                                <i aria-hidden="true" class="fa fa-link"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="sh-portfolio-widget-item">
-                            <a href="https://jevelin.shufflehound.com/project/wind-at-white-castle/" title="Half a frame" class="sh-portfolio-widget-background">
-                                <div class="sh-ratio">
-                                    <div class="sh-ratio-container sh-ratio-container-square">
-                                        <div class="sh-ratio-content" style="background-image: url(https://cdn.jevelin.shufflehound.com/wp-content/uploads/2016/02/Portfolio_1_1-150x150.jpg);"></div>
-                                    </div>
-                                </div>
-                                <div class="sh-mini-overlay">
-                                    <div class="sh-mini-overlay-container">
-                                        <div class="sh-table-full">
-                                            <div class="sh-table-cell">
-                                                <i aria-hidden="true" class="fa fa-link"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        @endforeach
                     </div>
 			    </div>
             </div>

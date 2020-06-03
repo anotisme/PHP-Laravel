@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Article;
+use App\Project;
 
 use Illuminate\Http\Request;
 
@@ -25,7 +26,8 @@ class HomeController extends Controller
     public function index()
     {
         $articles = Article::where('articles_category', 'Blog & News')->get();
+        $projects = Project::all();
 
-        return view('home', ['articles' => $articles]);
+        return view('home', ['articles' => $articles, 'projects' => $projects]);
     }
 }

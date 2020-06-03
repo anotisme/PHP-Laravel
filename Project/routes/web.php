@@ -48,4 +48,5 @@ Route::resource('category','CategoryController');
 
 Route::resource('articles-category','ArticlesCategoryController');
 
+Route::resource('projetcs','ProjectController');
 // Route::get('/articles/{post_slug}', 'ArticleController@show');
