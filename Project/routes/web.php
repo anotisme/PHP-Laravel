@@ -44,6 +44,14 @@ Route::resource('articles','ArticleController');
 
 Route::resource('products','ProductController');
 
+Route::get('add-to-cart/{id}', 'CartController@addToCart');
+
+Route::get('remove/{id}', 'CartController@removeProductFromCart')->name('remove');
+
+Route::get('update/{id}', 'CartController@removeProductFromCart')->name('remove');
+
+Route::get('/shop/cart', 'CartController@index');
+
 Route::resource('category','CategoryController');
 
 Route::resource('articles-category','ArticlesCategoryController');

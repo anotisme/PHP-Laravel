@@ -59,7 +59,7 @@
                                             </ins>
                                         </span>
                                     </a>
-                                    <a href="?add-to-cart=2642" class="add_to_cart_button" rel="nofollow">Add to cart</a>
+                                    <a href="/add-to-cart/{{ $product->id }}" class="add_to_cart_button" rel="nofollow">Add to cart</a>
                                 </div>
                             </div>
                         </div>

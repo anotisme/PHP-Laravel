@@ -1,4 +1,4 @@
-<div id="demo" class="carousel slide" data-ride="carousel">
+<section id="demo" class="carousel slide" data-ride="carousel">
 
     <!-- Indicators -->
     <ul class="carousel-indicators">
@@ -39,4 +39,4 @@
     <a class="carousel-control-next" href="#demo" data-slide="next">
         <span class="carousel-control-next-icon"></span>
     </a>
-</div>
+</section>

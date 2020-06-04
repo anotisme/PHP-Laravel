@@ -148,7 +148,8 @@ a {
 }
 li.menu-item {
 	&:last-child {
-		padding-right: 0;
+        padding-right: 0;
+        border-bottom: 1px solid transparent;
 	}
 }
 .sh-nav-social {
@@ -1774,7 +1775,7 @@ p:last-child {
     background-image: url(https://cdn.jevelin.shufflehound.com/wp-content/uploads/2016/04/Showcase_slide_img.jpg);
     background-size: cover;
     background-position: center;
-    padding: 200px !important;
+    padding: 200px 200px !important;
     text-align: center;
     color: #fff;
     background-attachment: fixed;
@@ -2672,4 +2673,127 @@ a {
     img.sh-ratio-content {
         min-height: 80px;
     }
+}
+
+.sh-header-builder-main-element-cart {
+    &:hover {
+        ul {
+            display: block !important;
+        }
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    ul.sub-menu {
+        display: none;
+        position: absolute;
+        background: #fff;
+        top: 100%;
+        padding: 0;
+        z-index: 1000;
+        li {
+            width: 100%;
+            float: none;
+            padding: 0;
+            position: relative;
+        }
+        li.no-item {
+            padding: 20px;
+        }
+    }
+}
+.sh-nav-cart {
+    ul.sub-menu {
+        width: 350px;
+        margin-left: -150px!important;
+        padding-bottom: 0;
+        box-shadow: 0 10px 60px 1px rgba(0,0,0,.08)!important;
+        margin-top: -10px;
+        border-radius: 2px!important;
+    }
+    ul.cart_list {
+        margin: 0 30px;
+        margin-bottom: 30px;
+        margin-top: 15px;
+        li.mini_cart_item {
+            padding-left: 0;
+            margin: 12px 0;
+            padding-bottom: 12px;
+            position: relative;
+            display: block;
+            a.remove {
+                left: auto;
+                right: 15px;
+                font-size: 20px;
+                background-color: transparent;
+                color: #ccc!important;
+                position: absolute;
+                top: 0;
+            }
+        }
+    }
+    .menu-item-cart {
+        .total {
+            border-top: 1px solid #f1f1f1!important;
+            padding: 17px;
+            margin: 0;
+            text-align: center;
+            border-top: 1px solid #464646;
+            border-bottom: 1px solid #464646;
+            text-transform: uppercase;
+        }
+    }
+    p.buttons {
+        a {
+            width: 50%;
+            display: inline-block;
+            padding: 0;
+            text-align: center;
+            border-radius: 0;
+            line-height: 70px!important;
+            max-height: 70px;
+            background-color: transparent!important;
+            margin-right: -4px;
+            border-radius: 0!important;
+            padding: 0 10px !important;
+            margin-bottom: 0;
+            &:first-child {
+                border-right: 1px solid #f1f1f1!important;
+            }
+        }
+    }
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background: #fff;
+}
+.alert-success {
+    position: absolute !important;
+    right: -250px;
+    top: 0;
+    margin: 0 !important;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+.alert {
+    -webkit-animation: cssAnimation 5s forwards;
+    animation: cssAnimation 5s forwards;
+}
+@keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+@-webkit-keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
 }

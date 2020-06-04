@@ -23,7 +23,9 @@
 <div id="app">
     @include('inc.navbar')
 
-    @yield('content')
+    <section id="content" style="margin-top: 100px;">
+        @yield('content')
+    </section>
 
     @include('inc.footer')
 </div>
@@ -68,6 +70,21 @@
             });
         }
     });
+</script>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+    var menu = document.getElementById("menu");
+    var sticky = menu.offsetTop;
+
+    function myFunction() {
+    if (window.pageYOffset >= sticky) {
+        menu.classList.add("sticky")
+    } else {
+        menu.classList.remove("sticky");
+    }
+}
 </script>
 
 </body>

@@ -42,18 +42,6 @@
                             <span class="sh-filter-item active" data-filter="*" data-href="#">
                                 <div class="sh-filter-item-content">All</div>
                             </span>
-                            <!-- <span class="sh-filter-item" data-filter=".category-commercial" data-href="#">
-                                <div class="sh-filter-item-content">Commercial</div>
-                            </span>
-                            <span class="sh-filter-item" data-filter=".category-design" data-href="#">
-                                <div class="sh-filter-item-content">Design</div>
-                            </span>
-                            <span class="sh-filter-item" data-filter=".category-life-work" data-href="#">
-                                <div class="sh-filter-item-content">Life &amp; Work</div>
-                            </span>
-                            <span class="sh-filter-item" data-filter=".category-misc" data-href="#">
-                                <div class="sh-filter-item-content">Misc.</div>
-                            </span> -->
                         </div>
                     </div>
                     <div id="pills-tabContent" >
@@ -78,7 +66,7 @@
                                                             <i class="fa fa-link" aria-hidden="true"></i>
                                                         </div>
                                                     </a>
-                                                    <a href="/storage/{{ $project->image }}" class="sh-overlay-item sh-table-cell">
+                                                    <a href="/storage/{{ $project->image }}" target="_blank" class="sh-overlay-item sh-table-cell">
                                                         <div class="sh-overlay-item-container">
                                                             <i class="fa fa-search-plus" aria-hidden="true"></i>
                                                         </div>
