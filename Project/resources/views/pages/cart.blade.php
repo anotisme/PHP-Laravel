@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container" style="margin-top: 45px">
+    <div class="container" style="padding-top: 45px">
         @if(session()->has('success_msg'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 {{ session()->get('success_msg') }}
@@ -34,8 +34,27 @@
                 @if(\Cart::getTotalQuantity()>0)
                     <h4>{{ \Cart::getTotalQuantity()}} Product(s) In Your Cart</h4><br>
                 @else
-                    <h4>No Product(s) In Your Cart</h4><br>
-                    <a href="/" class="btn btn-dark">Continue Shopping</a>
+                <div class="woocommerce"><div class="woocommerce-notices-wrapper"></div><p class="cart-empty woocommerce-info">Your cart is currently empty.</p>
+                    <p class="cart-empty"></p>
+                    <div class="sh-nothing-found sh-table">
+                        <div class="sh-table-cell-top">
+                            <i class="fa fa-compass" aria-hidden="true"></i>
+                        </div>
+                        <div class="sh-table-cell-top">
+                            <h2>Cart is empty</h2>
+                            <p>Looks like there is no items in your cart.</p>
+                        </div>
+                    </div>
+                    <div class="sh-nothing-found-big">
+                        <span>Your cart is</span>
+                        <div>Currently empty</div>
+                    </div>
+                    <div class="woocommerce-notices-wrapper"></div>
+                    <p class="cart-empty woocommerce-info">Your cart is currently empty.</p>
+                    <p class="return-to-shop">
+                        <a class="button wc-backward" href="/shop/">Return to shop</a>
+                    </p>
+                </div>
                 @endif
 
                 @foreach($cartCollection as $item)
@@ -53,7 +72,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="row">
-                                <form action="/update" method="POST">
+                                <form action="{{ route('update', [$item->id]) }}" method="PUT">
                                     {{ csrf_field() }}
                                     <div class="form-group row">
                                         <input type="hidden" value="{{ $item->id}}" id="id" name="id">
@@ -73,7 +92,7 @@
                     <hr>
                 @endforeach
                 @if(count($cartCollection)>0)
-                    <form action="/clear" method="POST">
+                    <form action="{{ route('clear') }}" method="PUT">
                         {{ csrf_field() }}
                         <button class="btn btn-secondary btn-md">Clear Cart</button>
                     </form>

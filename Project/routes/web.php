@@ -48,7 +48,9 @@ Route::get('add-to-cart/{id}', 'CartController@addToCart');
 
 Route::get('remove/{id}', 'CartController@removeProductFromCart')->name('remove');
 
-Route::get('update/{id}', 'CartController@removeProductFromCart')->name('remove');
+Route::get('update/{id}', 'CartController@updateProductFromCart')->name('update');
+
+Route::get('clear', 'CartController@clear')->name('clear');
 
 Route::get('/shop/cart', 'CartController@index');
 

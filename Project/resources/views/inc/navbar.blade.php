@@ -25,7 +25,7 @@
                             <a href="{{ route('shop') }}">Shop</a>
                         </li>
                         <li class="menu-item">
-                            <a href="/portfolio">Porfolio</a>
+                            <a href="/articles">Blog</a>
                         </li>
                         <li class="menu-item sh-nav-cart sh-nav-special sh-header-builder-main-element-cart">
                             <a href="/shop/cart/" class="sf-with-ul">

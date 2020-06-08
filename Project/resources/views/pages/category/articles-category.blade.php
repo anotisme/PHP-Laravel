@@ -4,13 +4,10 @@
 <div class="top-area">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-8 col-md-8">
+            <div class="col-xs-12 col-sm-12 col-md-12">
             @foreach ($articles as $article)
                 <h3 class="category-heading">{{ $article->category->name }} articles</h3>
             @endforeach
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4">
-                breadcrumb
             </div>
         </div>
     </div>

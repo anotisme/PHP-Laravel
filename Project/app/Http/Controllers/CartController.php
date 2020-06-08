@@ -45,9 +45,23 @@ class CartController extends Controller
         return redirect()->back()->with('message', 'Remove item in cart successfully!');
     }
 
-    public function destroyCart()
+    public function updateProductFromCart($productId, Request $request)
     {
-        \Cart::destroy();
+        \Cart::update($productId, [
+            'quantity' => array(
+                'relative' => false,
+                'value' => $request->quantity
+            )
+        ]);
+
+        Session::flash('message', 'Update item in cart successfully!');
+
+        return redirect()->back()->with('message', 'Update item in cart successfully!');
+    }
+
+    public function clear()
+    {
+        \Cart::clear();
 
         return redirect()->back()->with('sucess', 'Remove cart successfully!');
     }

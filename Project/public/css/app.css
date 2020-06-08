@@ -3044,6 +3044,92 @@ a:hover {
   }
 }
 
+.woocommerce-info {
+  padding: 1em 2em 1em 3.5em;
+  margin: 0 0 2em;
+  position: relative;
+  background-color: #f7f6f7;
+  color: #515151;
+  border-top: 3px solid #a46497;
+  list-style: none outside;
+  width: auto;
+  word-wrap: break-word;
+}
+
+.sh-nothing-found {
+  background-color: #f4f4f4;
+  padding: 19px;
+  float: none;
+}
+
+.sh-nothing-found .sh-table-cell-top:first-child {
+  width: 45px;
+}
+
+.sh-nothing-found i {
+  color: #505050;
+  font-size: 26px;
+}
+
+.sh-table-cell-top {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.sh-table {
+  display: table;
+  width: 100%;
+}
+
+.sh-nothing-found-big {
+  margin-top: 50px;
+  color: #e5e5e5;
+  font-weight: bold;
+  max-width: 500px;
+}
+
+.sh-nothing-found-big span {
+  font-size: 56px;
+  line-height: 56px;
+}
+
+.sh-nothing-found-big div {
+  font-size: 110px;
+  text-transform: uppercase;
+  line-height: 100px;
+}
+
+.woocommerce a.button {
+  font-size: 100%;
+  margin: 0;
+  line-height: 1;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  overflow: visible;
+  padding: 0.618em 1em;
+  font-weight: 700;
+  border-radius: 3px;
+  left: auto;
+  background-color: #294cff !important;
+  color: #fff;
+  border-radius: 50px;
+  border: 0;
+  display: inline-block;
+  background-image: none;
+  box-shadow: none;
+  text-shadow: none;
+  line-height: 50px !important;
+  padding: 0 30px !important;
+  -webkit-transition: 0.25s all ease-in-out;
+  transition: 0.25s all ease-in-out;
+}
+
+.woocommerce a.button:hover {
+  opacity: 0.8;
+  color: #fff !important;
+}
+
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
