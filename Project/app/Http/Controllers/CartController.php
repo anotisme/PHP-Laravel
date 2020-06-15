@@ -65,4 +65,11 @@ class CartController extends Controller
 
         return redirect()->back()->with('sucess', 'Remove cart successfully!');
     }
+
+    public function checkout()
+    {
+        $cartCollection = \Cart::getContent();
+
+        return view('pages.checkout')->with(['cartCollection' => $cartCollection]);
+    }
 }

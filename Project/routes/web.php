@@ -54,6 +54,8 @@ Route::get('clear', 'CartController@clear')->name('clear');
 
 Route::get('/shop/cart', 'CartController@index');
 
+Route::get('/shop/checkout', 'CartController@checkout')->name('checkout');
+
 Route::resource('category','CategoryController');
 
 Route::resource('articles-category','ArticlesCategoryController');
