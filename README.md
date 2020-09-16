@@ -1,6 +1,10 @@
-## About The Project
+# About The Project
 
-This is a shopping online page
+This is a shopping online page. Using Laravel Framework 6 for client side and Voyager for admin side.
+
+## What is Voyager
+
+Please visit this link https://voyager-docs.devdojo.com/getting-started/what-is-voyager 
 
 ## Prerequisites
 
@@ -8,6 +12,7 @@ Before you begin, ensure you have met the following requirements:
 
 * node version: 14.*
 * npm version: 6.14.*
+* Laravel Framework 6.*
 
 ## Getting Started
 
@@ -33,7 +38,7 @@ Move to Project folder by
 ```
 cd Project
 ```
-Run following commands
+#### Run following commands:
 
 Build node_modules folder
 ```
