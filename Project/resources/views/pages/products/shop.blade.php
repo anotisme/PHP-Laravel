@@ -59,7 +59,11 @@
                                             </ins>
                                         </span>
                                     </a>
-                                    <a href="/add-to-cart/{{ $product->id }}" class="add_to_cart_button" rel="nofollow"><i aria-hidden="true" class="fa fa-shopping-cart"></i> Add to cart</a>
+                                    <form class="cart" action="/add-to-cart/{{ $product->id }}" method="put" enctype="multipart/form-data">
+                                        <input type="hidden" value="1" id="quantity" class="quantity" name="quantity" >
+                                        <button type="submit" class="add_to_cart_button"><i aria-hidden="true" class="fa fa-shopping-cart"></i> Add to cart</button>
+                                    </form>
+                                    </a>
                                 </div>
                             </div>
                         </div>

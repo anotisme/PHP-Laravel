@@ -16,7 +16,7 @@ class CartController extends Controller
         return view('pages.cart')->with(['cartCollection' => $cartCollection]);
     }
 
-    public function addToCart($id)
+    public function addToCart($id, Request $request)
     {
         $product = Product::find($id);
 
@@ -24,7 +24,7 @@ class CartController extends Controller
             'id' => $product->id,
             'name' => $product->name,
             'price' => $product->price,
-            'quantity' => $product->quantity,
+            'quantity' => $request->input('quantity'),
             'attributes' => [
                 'image' => $product->image,
                 'slug' => $product->slug

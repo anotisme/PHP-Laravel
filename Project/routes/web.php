@@ -60,7 +60,7 @@ Route::resources([
 ]);
 
 Route::any('/search',function(){
-    $s = \Request::get ( 's' );
+    $s = \Request::get('s');
     $products = Product::where('name','LIKE','%'.$s.'%')->get();
     $articles_categories = ArticlesCategory::withCount('Article')->get();
 

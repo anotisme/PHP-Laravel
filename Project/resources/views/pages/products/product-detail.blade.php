@@ -48,18 +48,21 @@
                             <p>{{ str_limit(strip_tags($product->description), 200) }}</p>
                         </div>
 
-                        <form class="cart" action="/products/{{ $product->sku }}" method="post" enctype="multipart/form-data">
+                        <form class="cart" action="/add-to-cart/{{ $product->id }}" method="put" enctype="multipart/form-data">
                             <div class="quantity sh-increase-numbers">
-                                <span class="sh-noselect sh-increase-number-down">
+                                <span id="decrement" class="sh-noselect sh-increase-number-down">
                                     <i class="fa fa-arrow-down" aria-hidden="true"></i>
                                 </span>
-                                <label class="sh-quantity-number" for="quantity_5ed5d542854e4" type="text">{{ $product->name }} quantity</label>
-                                <input type="text" id="quantity_5ed5d542854e4" class="sh-quantity-number" step="1" min="1" max="" name="quantity" value="1" title="Qty" size="4" inputmode="numeric">
-                                <span class="sh-noselect sh-increase-number-up">
+                                <label class="sh-quantity-number" for="quantity" type="text">{{ $product->name }} quantity</label>
+                                <input type="text" id="quantity" class="sh-quantity-number" max="{{ $product->sku }}" name="quantity" value="1" title="Qty">
+                                <span id="increment" class="sh-noselect sh-increase-number-up">
                                     <i class="fa fa-arrow-up" aria-hidden="true"></i>
                                 </span>
                             </div>
-                            <button type="submit" name="add-to-cart" value="2684" class="single_add_to_cart_button button alt"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</button>
+                            <button type="submit" name="add-to-cart" class="single_add_to_cart_button button alt">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                Add to cart
+                            </button>
                         </form>
 
                         <div class="product_meta">
@@ -178,7 +181,7 @@
                                                 </ins>
                                             </span>
                                         </a>
-                                        <a href="?add-to-cart=2642" class="add_to_cart_button" rel="nofollow">Add to cart
+                                        <a href="/add-to-cart/{{ $product->id }}" class="add_to_cart_button" rel="nofollow">Add to cart
                                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                         </a>
                                     </div>

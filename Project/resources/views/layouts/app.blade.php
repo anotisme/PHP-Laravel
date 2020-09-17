@@ -70,6 +70,21 @@
             });
         }
     });
+    jQuery(document).ready(function($){
+        $('#increment').click(function() {
+            var value = $('#quantity').val();
+            value++ ;
+            $('#quantity').val(value);
+            console.log(value);
+        });
+        jQuery('#decrement').click(function() {
+            var value = $('#quantity').val();
+            value-- ;
+            if(value < 1) value = 1;
+            $('#quantity').val(value);
+            console.log(value);
+        });
+    });
 </script>
 
 <script>
