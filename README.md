@@ -1,6 +1,6 @@
 # About The Project
 
-This is a shopping online page. Using Laravel Framework 6 for client side and Voyager for admin side.
+This is a shopping online page. Using Laravel Framework 7 for client side and Voyager for admin side.
 
 ## What is Voyager
 
@@ -12,7 +12,7 @@ Before you begin, ensure you have met the following requirements:
 
 * node version: 14.*
 * npm version: 6.14.*
-* Laravel Framework 6.*
+* Laravel Framework 7.*
 
 ## Getting Started
 
