@@ -19,7 +19,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-5">
                             <a href="/products/{{ $product->id }}">
-                                <img src="/storage/{{ $product->image }}" class="card-img-top wp-post-image" alt="" />
+                                <img style="min-height: 250px;" src="/storage/{{ $product->image }}" class="card-img-top wp-post-image" alt="" />
                             </a>
                         </div>
                         <div class="col-xs-12 col-sm-7">
@@ -29,7 +29,7 @@
                                 </a>
                                 <div class="post-meta post-meta-one">
                                     <span class="post-meta-author">by
-                                        <a href="https://jevelin.shufflehound.com/author/shufflehound/" class="bypostauthor" itemprop="url" rel="author">
+                                        <a href="/" class="bypostauthor" itemprop="url" rel="author">
                                             shufflehound
                                         </a>
                                     </span>

@@ -55,7 +55,7 @@
                                         </a>
                                     </span>
                                     <meta itemprop="interactionCount" content="UserComments:0">
-                                    <a href="/#comments" class="post-meta-comments" tabindex="0">
+                                    <a href="#comments" class="post-meta-comments" tabindex="0">
                                         <i class="fa fa-comments-o" aria-hidden="true"></i>0
                                     </a>
                                 </div>

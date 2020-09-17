@@ -21,7 +21,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-5">
                             <a href="/articles/{{ $article->id }}">
-                                <img src="/storage/{{ $article->image }}" class="card-img-top wp-post-image" alt="" />
+                                <img style="min-height: 250px;" src="/storage/{{ $article->image }}" class="card-img-top wp-post-image" alt="" />
                             </a>
                         </div>
                         <div class="col-xs-12 col-sm-7">
@@ -31,7 +31,7 @@
                                 </a>
                                 <div class="post-meta post-meta-one">
                                     <span class="post-meta-author">by
-                                        <a href="https://jevelin.shufflehound.com/author/shufflehound/" class="bypostauthor" itemprop="url" rel="author">
+                                        <a href="/" class="bypostauthor" itemprop="url" rel="author">
                                             shufflehound
                                         </a>
                                     </span>
@@ -48,7 +48,7 @@
                                             <a href="/articles-category/{{ $article->category->name }}" rel="category tag">{{ $article->category->name }}</a>
                                         </span>
                                         <meta itemprop="interactionCount" content="UserComments:0">
-                                        <a href="https://jevelin.shufflehound.com/team-retreat-at-ocean-spa/#comments" class="post-meta-comments">
+                                        <a href="/#comments" class="post-meta-comments">
                                             <i aria-hidden="true" class="fa fa-comments-o"></i>0
                                         </a>
                                     </div>

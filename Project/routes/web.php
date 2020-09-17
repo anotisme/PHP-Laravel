@@ -1,4 +1,6 @@
 <?php
+use App\Product;
+use App\ArticlesCategory;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,24 +27,17 @@ Route::get('/about', function () {
 });
 Route::get('/posts', 'ArticleController@index');
 
-
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
 Auth::routes();
 
-// dd(Voyager::routes()); die();
-
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/shop', 'ProductController@index')->name('shop');
 
 Route::get('/news', 'NewsController@index')->name('news');
-
-Route::resource('articles','ArticleController');
-
-Route::resource('products','ProductController');
 
 Route::get('add-to-cart/{id}', 'CartController@addToCart');
 
@@ -56,9 +51,19 @@ Route::get('/shop/cart', 'CartController@index');
 
 Route::get('/shop/checkout', 'CartController@checkout')->name('checkout');
 
-Route::resource('category','CategoryController');
+Route::resources([
+    'products'          => 'ProductController',
+    'category'          => 'CategoryController',
+    'articles-category' => 'ArticlesCategoryController',
+    'projetcs'          => 'ProjectController',
+    'articles'          => 'ArticleController',
+]);
 
-Route::resource('articles-category','ArticlesCategoryController');
+Route::any('/search',function(){
+    $s = \Request::get ( 's' );
+    $products = Product::where('name','LIKE','%'.$s.'%')->get();
+    $articles_categories = ArticlesCategory::withCount('Article')->get();
 
-Route::resource('projetcs','ProjectController');
+    return view('pages.seacrh-result', ['products' => $products, 'articles_categories' => $articles_categories])->withQuery ( $s );
+});
 // Route::get('/articles/{post_slug}', 'ArticleController@show');

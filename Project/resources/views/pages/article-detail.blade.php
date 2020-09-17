@@ -17,7 +17,7 @@
                     <div class="article-content">
                         <div class="post-meta-thumb">
                             <a href="/storage/{{ $article['image'] }}" class="sh-overlay-item sh-table-cell" data-rel="lightcase">
-                                <img src="/storage/{{ $article['image'] }}" class="post-image" alt="">
+                                <img style="min-height: 250px;" src="/storage/{{ $article['image'] }}" class="post-image" alt="">
                             </a>
                         </div>
                         <a href="/articles/{{ $article->id }}" class="post-title">
@@ -26,7 +26,7 @@
                         <div class="post-meta-data sh-columns">
                             <div class="post-meta post-meta-one">
                                 <span class="post-meta-author">by
-                                    <a href="https://jevelin.shufflehound.com/author/shufflehound/" class="bypostauthor" itemprop="url" rel="author">
+                                    <a href="/" class="bypostauthor" itemprop="url" rel="author">
                                         shufflehound
                                     </a>
                                 </span>

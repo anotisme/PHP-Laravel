@@ -1,6 +1,6 @@
 <div id="sidebar" class="sidebar-widget">
     <div id="search-2" class="widget-item widget_search">
-        <form method="get" class="search-form" action="https://jevelin.shufflehound.com/">
+        <form method="get" class="search-form" action="/search">
             <div>
                 <label>
                     <input type="search" class="sh-sidebar-search search-field" placeholder="Search here..." value="" name="s" title="Search text" required="">
