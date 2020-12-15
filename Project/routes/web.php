@@ -51,12 +51,17 @@ Route::get('/shop/cart', 'CartController@index');
 
 Route::get('/shop/checkout', 'CartController@checkout')->name('checkout');
 
+Route::get('users/edit/{id}', 'UserController@edit')->name('user.edit.{id}');
+
+Route::get('users/update/{id}', 'UserController@update')->name('user.update.{id}');
+
 Route::resources([
     'products'          => 'ProductController',
     'category'          => 'CategoryController',
     'articles-category' => 'ArticlesCategoryController',
     'projetcs'          => 'ProjectController',
     'articles'          => 'ArticleController',
+    'users'             => 'UserController',
 ]);
 
 Route::any('/search',function(){

@@ -11,6 +11,7 @@
         </div>
     </div>
     <div class="center-area">
+        @if(isset($product))
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-6">
@@ -198,5 +199,25 @@
                 </div>
             </div>
         </div>
+        @else
+        <div class="container">
+            <div class="product-container">
+                <div class="sh-group blog-list blog-style-masonry masonry-shadow" style="position: relative; opacity: 1;">
+                    <div class="sh-nothing-found sh-table">
+                        <div class="sh-table-cell-top">
+                            <i class="fa fa-compass"></i>
+                        </div>
+                        <div class="sh-table-cell-top">
+                            <h2>No product found</h2>
+                        </div>
+                    </div>
+                    <div class="sh-nothing-found-big">
+                        <span>Sorry</span>
+                        <div>No product found</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endif
     </div>
 @endsection
